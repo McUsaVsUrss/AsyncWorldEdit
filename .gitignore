@@ -3,6 +3,7 @@
 /*/dist/
 /*/lib/
 /*/test/
+/*/out/
 
 # Idea
 *.iml

@@ -195,4 +195,9 @@ public class UndoProcessor implements Operation {
     @Override
     public void cancel() {
     }
+
+    @Override
+    public void addStatusMessages(List<String> list) {
+        //TODO What is this?
+    }
 }

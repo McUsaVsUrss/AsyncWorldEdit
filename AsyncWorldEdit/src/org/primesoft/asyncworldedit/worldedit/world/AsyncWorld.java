@@ -47,6 +47,7 @@ import com.sk89q.worldedit.Vector;
 import com.sk89q.worldedit.Vector2D;
 import com.sk89q.worldedit.WorldEditException;
 import com.sk89q.worldedit.blocks.BaseBlock;
+import com.sk89q.worldedit.blocks.BaseItem;
 import com.sk89q.worldedit.blocks.BaseItemStack;
 import com.sk89q.worldedit.bukkit.BukkitWorld;
 import com.sk89q.worldedit.entity.BaseEntity;
@@ -55,6 +56,7 @@ import com.sk89q.worldedit.extension.platform.Platform;
 import com.sk89q.worldedit.function.mask.Mask;
 import com.sk89q.worldedit.function.operation.Operation;
 import com.sk89q.worldedit.regions.Region;
+import com.sk89q.worldedit.util.Direction;
 import com.sk89q.worldedit.util.Location;
 import com.sk89q.worldedit.util.TreeGenerator;
 import com.sk89q.worldedit.world.World;
@@ -208,6 +210,11 @@ public class AsyncWorld extends AbstractWorldWrapper {
                 return m_parent.createLiquidMask();
             }
         });
+    }
+
+    @Override
+    public boolean useItem(Vector vector, BaseItem baseItem, Direction direction) {
+        return m_parent.useItem(vector, baseItem, direction);
     }
 
     @Override
